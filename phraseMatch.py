@@ -6,9 +6,10 @@ pdfFileObj = open(
     'C:\\Users\\tanma\\Downloads\\TataComm_all_files\\TataComm_all_files\\msa_format_1\\msa_format_1_epdf\\test.pdf', 'rb')
 pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 pageObj = pdfReader.getPage(0)
-print(pageObj.extractText())
+# print(pageObj.extractText())
 
-nlp = spacy.load("en_core_web_sm")
+# nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_trf")
 matcher = PhraseMatcher(nlp.vocab)
 terms = ["MASTER SERVICES AGREEMENT"]
 # Only run nlp.make_doc to speed things up
