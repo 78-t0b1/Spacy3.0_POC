@@ -33,4 +33,4 @@ for text, annot in tqdm(TRAIN_DATA): # data in previous format
     doc.ents = ents # label the text with the ents
     db.add(doc)
 
-db.to_disk("./train.spacy") # save the docbin object
+db.to_disk("./train.spacy") # save the docbin object 
